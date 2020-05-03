@@ -11,8 +11,8 @@ def main():
     return 'Hello World! Built with Source 2 Image Build Strategy.'
 
 @app.route('/whoami')   # URL '/' to be handled by main() route handler
-def main():
-    """Say hello"""
+def whoami():
+    """Who Am I"""
     return 'I am Batman!!'
 
 if __name__ == '__main__':  # Script executed directly?
