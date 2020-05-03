@@ -1,12 +1,11 @@
-# Shamelessly copied from http://flask.pocoo.org/docs/quickstart/
+from flask import Flask  # From module flask import class Flask
+app = Flask(__name__)    # Construct an instance of Flask class for our webapp
 
-from flask import Flask
-app = Flask(__name__)
+@app.route('/')   # URL '/' to be handled by main() route handler
+def main():
+    """Say hello"""
+    return 'Hello, world!'
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
-if __name__ == '__main__':
-    app.run()
-
+if __name__ == '__main__':  # Script executed directly?
+    print("Hello World! Built with Source 2 Image Build Strategy.")
+    app.run(host="0.0.0.0", port=5000, debug=True,use_reloader=True)  # Launch built-in web server and run this Flask webapp
