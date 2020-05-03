@@ -8,7 +8,7 @@ PORT = int(os.environ.get('OPENSHIFT_PYTHON_PORT', 8080))
 @app.route('/')   # URL '/' to be handled by main() route handler
 def main():
     """Say hello"""
-    return 'Hello, world!'
+    return 'Hello World! Built with Source 2 Image Build Strategy.'
 
 if __name__ == '__main__':  # Script executed directly?
     print("Hello World! Built with Source 2 Image Build Strategy.")
